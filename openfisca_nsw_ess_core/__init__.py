@@ -26,6 +26,6 @@ class CountryTaxBenefitSystem(TaxBenefitSystem):
 
         # We define which variable, parameter and simulation example will be used in the OpenAPI specification
         self.open_api_config = {
-            "variable_example": "active_kids__child_meets_criteria",
-            "parameter_example": "active_kids.min_age",
+            "variable_example": "number_of_certificates",
+            "parameter_example": "general_ESS.days_in_year",
             }
