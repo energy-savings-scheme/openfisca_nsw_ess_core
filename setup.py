@@ -2,7 +2,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="openfisca_nsw_ess_heab",
+    name="openfisca_nsw_ess_core",
     version="0.0.1",
     author="Department of Planning Industry and Environment - NSW Government",
     author_email = 'liam.mccann@environment.nsw.gov.au',
@@ -19,7 +19,7 @@ setup(
     url = "https://github.com/Openfisca-NSW/openfisca_nsw_ess_heab",
     include_package_data = True,  # Will read MANIFEST.in
     data_files = [
-        ("share/openfisca/openfisca_nsw_ess_heab", ["CHANGELOG.md", "LICENSE", "README.md"]),
+        ("share/openfisca/openfisca_nsw_ess_core", ["CHANGELOG.md", "LICENSE", "README.md"]),
         ],
     install_requires = [
         'OpenFisca_nsw_base'
