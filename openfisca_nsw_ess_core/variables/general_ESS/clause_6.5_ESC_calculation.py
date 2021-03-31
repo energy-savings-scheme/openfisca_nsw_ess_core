@@ -33,3 +33,22 @@ class gas_savings(Variable):
     entity = Building
     definition_period = ETERNITY
     label = 'gas savings created from implementation.'
+
+
+class ESC_creation_date(Variable):
+    value_type = date
+    entity = Building
+    definition_period = ETERNITY
+    label = 'What is the date on which ESCs are registered and created?'
+
+
+class ESC_created_on_or_after_1_July_2009(Variable):
+    value_type = bool
+    entity = Building
+    definition_period = ETERNITY
+    label = 'Were the ESCs created on or after 1 July 2009?'
+
+    def formula(buildings, period, parameters):
+        ESC_creation_date = buildings('ESC_creation_date', period)
+        ESS_commencement_date = np.datetime64('2009-01-07')
+        return where((ESC_creation_date >= ESS_commencement_date), True, False)
